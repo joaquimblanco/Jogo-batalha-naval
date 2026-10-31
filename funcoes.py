@@ -36,7 +36,19 @@ def posiciona_frota(dicionario_navio):
                 tabuleiro[x][y] = 1
     return tabuleiro
 
-# exercicio 5:
+def afundados(frota,tabuleiro):
+    navios_afundados = 0
+    for tipo_navio,lista_navios in frota.items():
+        for navio in lista_navios:
+            partes_atingidas = 0
+            for posicao in navio:
+                linha = posicao[0]
+                coluna = posicao[1]
+                if tabuleiro[linha][coluna] == 'X':
+                    partes_atingidas += 1
+            if partes_atingidas == len(navio):
+                navios_afundados += 1
+    return navios_afundados
 
 # exercicio 6:
 
