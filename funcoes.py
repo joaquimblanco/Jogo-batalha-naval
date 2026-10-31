@@ -53,3 +53,7 @@ def afundados(frota,tabuleiro):
 # exercicio 6:
 
 # exercicio 7:
+
+# exercicio 8:
+
+# exercicio 9:
