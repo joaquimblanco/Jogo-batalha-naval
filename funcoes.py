@@ -50,8 +50,17 @@ def afundados(frota,tabuleiro):
                 navios_afundados += 1
     return navios_afundados
 
-# exercicio 6:
-
+def posicao_valida(informacoes_navios,linha,coluna,orientacao,tamaho):
+    novas_posicoes = define_posicoes(linha,coluna,orientacao,tamanho)
+    for pos in novas_posicoes:
+        l,c = pos[0],pos[1]
+        if l < 0 or l > 9 or c < 0 or c > 9:
+            return False
+        for lista_de_navios in informacoes_navios.values():
+            for navio in lista_de_navios:
+                if pos in navio:
+                    return False
+    return True
 # exercicio 7:
 
 # exercicio 8:
