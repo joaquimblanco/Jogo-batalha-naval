@@ -10,6 +10,14 @@ def define_posicoes(linha, coluna, orientacao, tamanho):
             grid.append([linha + indice, coluna])
             indice += 1
     return grid
+
+def preenche_frota(dicionario_frota, nome_navio, linha, coluna, orientacao, tamanho):
+    posicoes = define_posicoes(linha, coluna, orientacao, tamanho)
+    if nome_navio not in dicionario_frota:
+        dicionario_frota[nome_navio] = []
+    dicionario_frota[nome_navio].append(posicoes)
+    return dicionario_frota
+
 def posicao_valida(informacoes_navios,linha,coluna,orientacao,tamanho):
     novas_posicoes = define_posicoes(linha,coluna,orientacao,tamanho)
     for pos in novas_posicoes:
