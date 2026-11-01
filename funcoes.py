@@ -61,7 +61,8 @@ def posicao_valida(informacoes_navios,linha,coluna,orientacao,tamaho):
                 if pos in navio:
                     return False
     return True
-# exercicio 7:
+
+
 
 # exercicio 8:
 
