@@ -50,7 +50,7 @@ def afundados(frota,tabuleiro):
                 navios_afundados += 1
     return navios_afundados
 
-def posicao_valida(informacoes_navios,linha,coluna,orientacao,tamaho):
+def posicao_valida(informacoes_navios,linha,coluna,orientacao,tamanho):
     novas_posicoes = define_posicoes(linha,coluna,orientacao,tamanho)
     for pos in novas_posicoes:
         l,c = pos[0],pos[1]
