@@ -1,3 +1,15 @@
+def posicao_valida(informacoes_navios,linha,coluna,orientacao,tamanho):
+    novas_posicoes = define_posicoes(linha,coluna,orientacao,tamanho)
+    for pos in novas_posicoes:
+        l,c = pos[0],pos[1]
+        if l < 0 or l > 9 or c < 0 or c > 9:
+            return False
+        for lista_de_navios in informacoes_navios.values():
+            for navio in lista_de_navios:
+                if pos in navio:
+                    return False
+    return True
+
 frota = {}
 configuracao_navios = [("porta-aviões",4,1),("navio-tanque",3,2),("contratorpedeito",2,3),("submarino",1,4)]
 for nome_navio,tamanho,quantidade in configuracao_navios:
