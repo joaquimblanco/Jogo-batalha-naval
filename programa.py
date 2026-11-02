@@ -48,12 +48,10 @@ for nome_navio,tamanho,quantidade in configuracao_navios:
             elif opcao_orientacao == 2:
                 orientacao = 'horizontal'
         if posicao_valida(frota,linha,coluna,orientacao,tamanho) == True:
-            if nome_navio in frota:
-                frota[nome_navio] += preenche_frota(frota,nome_navio,linha,coluna,orientacao,tamanho)
-                i += 1
-            else:
-                frota[nome_navio] = preenche_frota(frota,nome_navio,linha,coluna,orientacao,tamanho)
-                i += 1
+            if nome_navio not in frota:
+                frota[nome_navio] = []
+            frota[nome_navio].append(preenche_frota(frota,nome_navio,linha,coluna,orientacao,tamanho).get(nome_navio))
+            i += 1
         else:
             print("Esta posição não está válida!")
 print(frota)
