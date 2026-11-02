@@ -35,8 +35,8 @@ frota = {}
 configuracao_navios = [("porta-aviões",4,1),("navio-tanque",3,2),("contratorpedeiro",2,3),("submarino",1,4)]
 for nome_navio,tamanho,quantidade in configuracao_navios:
     i = 0
-    print(f"Insira as informacoes do navio {nome_navio} que possui tamanho {tamanho}")
     while i < quantidade:
+        print(f"Insira as informacoes do navio {nome_navio} que possui tamanho {tamanho}")
         linha = int(input("Linha: "))
         coluna = int(input("Coluna: "))
         if tamanho == 1:
