@@ -1,4 +1,4 @@
-from funcoes import define_posicoes, preenche_frota, posicao_valida
+from funcoes import define_posicoes, preenche_frota, posicao_valida, faz_jogada, afundados, monta_tabuleiros
 frota = {}
 configuracao_navios = [("porta-aviões",4,1),("navio-tanque",3,2),("contratorpedeiro",2,3),("submarino",1,4)]
 for nome_navio,tamanho,quantidade in configuracao_navios:
