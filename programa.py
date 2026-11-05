@@ -13,7 +13,7 @@ for nome_navio,tamanho,quantidade in configuracao_navios:
         if tamanho == 1:
             orientacao = 'vertical'
         else:
-            opcao_orientacao = int(input("[1] Vertical [2] Horizontal >"))
+            opcao_orientacao = int(input("[1] Vertical [2] Horizontal "))
             if opcao_orientacao == 1:
                 orientacao = 'vertical'
             elif opcao_orientacao == 2:
@@ -57,6 +57,7 @@ while jogando:
         if navios_afundados_oponente == 10:
             print("Parabéns! Você derrubou todos os navios do seu oponente!")
             jogando = False
+            break
         elif turno % 2 == 0:
             posicao_nova_oponente = False
             while not posicao_nova_oponente:
@@ -70,4 +71,4 @@ while jogando:
             turno += 1
             if navios_afundados_jogador == 10:
                print("Xi! O oponente derrubou toda a sua frota =(")
-            jogando = False
+               jogando = False
